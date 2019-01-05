@@ -1,0 +1,22 @@
+body{
+  background: #222226;
+  color: #E9E9EA;
+}
+a, a:hover{
+  text-decoration: none;
+}
+.top-menu {
+  list-style: none;
+}
+.top-menu-item {
+  display: inline-block;
+  padding: 10px;
+}
+.top-menu-item a {
+  font-size: 20px;
+  line-height: 24px;
+  color: #939398;
+}
+.top-menu-item a:hover{
+  color: #4671ff;
+}
