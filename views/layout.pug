@@ -1,0 +1,122 @@
+doctype html
+html
+  head
+    title= title
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(charset="UTF-8")
+
+    link(href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:400,600,700" rel="stylesheet")
+    link(href="plugin-frameworks/bootstrap.css" rel="stylesheet")
+    link(href="fonts/ionicons.css" rel="stylesheet")
+    link(href="common/styles.css" rel="stylesheet")
+  body
+    header
+      div(class="bg-191")
+        div(class="container")
+        div(class="oflow-hidden color-ash font-9 text-sm-center ptb-sm-5")
+          ul(class='float-left float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-10')
+            each item, i in ['About', 'Blog', 'Contact']
+              li
+                a(class= i == 0 ? "pl-0 pl-sm-10" : '' href="#")= item
+
+          ul(class='float-right float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-5')
+            each item, i in ['ion-social-facebook', 'ion-social-twitter', 'ion-social-google', 'ion-social-instagram']
+              li
+                a(class= i == 0 ? "pl-0 pl-sm-10" : '' href="#")
+                  i(class=item)
+
+      div(class="container")
+        a(class="logo" href="/")
+          img(src="images/logo-black.png" alt="Logo")
+        a(class="right-area src-btn" href="#")
+          i(class="active src-icn ion-search")
+          i(class="close-icn ion-close")
+
+        div(class="src-form")
+          form
+            input(type="text" placeholder="Search here")
+            button(type="submit")
+              i(class="ion-search")
+
+        a(class="menu-nav-icon" data-menu="#main-menu" href="#")
+          i(class="ion-navicon")
+
+        ul(class="main-menu" id="main-menu")
+          each item in categories
+            li
+              a(href="/category/" + item.slug)=item.title
+
+        div(class="clearfix")
+
+
+
+    div(class="container")
+      block content
+
+
+    footer(class="bg-191 color-ccc")
+      div(class="container")
+        div(class="pt-50 pb-20 pos-relative")
+          div(class="abs-tblr pt-50 z--1 text-center")
+            div(class="h-80 pos-relative")
+              img(class="opacty-1 h-100 w-auto" src="images/map.png" alt="")
+          div(class="row")
+            div(class="col-sm-4")
+              div(class="mb-30")
+                a(href="#")
+                  img(src="images/logo-white.png")
+                p(class="mtb-20 color-ccc") Bit coin is an open-source, peer-to-peer, digital decentralized cryptocurrency. Powered by blockchain technology, its defining characteristic is
+                p(class="color-ash") Copyright &copy;2018 All rights reserved | This template is made with
+            div(class="col-sm-4")
+              div(class="mb-30")
+                h5(class="color-primary mb-20")
+                  b MOST POPULAR
+                div(class="mb-20")
+                  a(class="color-white" href="#")
+                    b Its Make or Break Time for Bitcoin
+                  h6(class="mt-10") Jan 25, 2018
+              div(class="brdr-ash-1 opacty-2 mr-30")
+              div(class="mb-30")
+                h5(class="color-primary mb-20")
+                  b MOST POPULAR
+                div(class="mb-20")
+                  a(class="color-white" href="#")
+                    b Its Make or Break Time for Bitcoin
+                  h6(class="mt-10") Jan 25, 2018
+
+
+
+            div(class="col-sm-4")
+              div(class="mb-30")
+                h5(class="color-primary mb-20")
+                  b MOST POPULAR
+                div(class="mb-20")
+                  a(class="color-white" href="#")
+                    b Its Make or Break Time for Bitcoin
+                  h6(class="mt-10") Jan 25, 2018
+              div(class="brdr-ash-1 opacty-2 mr-30")
+              div(class="mb-30")
+                h5(class="color-primary mb-20")
+                  b MOST POPULAR
+                div(class="mb-20")
+                  a(class="color-white" href="#")
+                    b Its Make or Break Time for Bitcoin
+                  h6(class="mt-10") Jan 25, 2018
+
+
+        div(class="brdr-ash-1 opacty-2")
+        div(class="oflow-hidden color-ash font-9 text-sm-center ptb-sm-5")
+          ul(class="float-left float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-10")
+            each item, i in ['Terms & Conditions', 'Privacy policy', 'Jobs advertising', 'Contact us']
+              li
+                a(class= i == 0 ? "pl-0 pl-sm-10" : '' href="#")=item
+          ul(class="float-right float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-5")
+            each item, i in ['ion-social-facebook', 'ion-social-twitter', 'ion-social-google', 'ion-social-instagram']
+              li
+                a(class= i == 0 ? "pl-0 pl-sm-10" : '' href="#")
+                  i(class=item)
+    script(src="plugin-frameworks/jquery-3.2.1.min.js")
+    script(src="plugin-frameworks/tether.min.js")
+    script(src="plugin-frameworks/bootstrap.js")
+    script(src="common/scripts.js")
